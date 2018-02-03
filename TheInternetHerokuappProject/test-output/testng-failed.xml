@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.automation.tests.theInternetHerokuappTests">
+        <methods>
+          <include name="formAuthentication5"/>
+          <include name="formAuthentication6"/>
+          <include name="formAuthentication7"/>
+          <include name="formAuthentication8"/>
+          <include name="formAuthentication9"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="formAuthentication10"/>
+          <include name="formAuthentication2"/>
+          <include name="formAuthentication3"/>
+          <include name="formAuthentication4"/>
+        </methods>
+      </class> <!-- com.automation.tests.theInternetHerokuappTests -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
