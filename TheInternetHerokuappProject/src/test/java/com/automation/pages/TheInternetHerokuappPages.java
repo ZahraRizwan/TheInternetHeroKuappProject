@@ -1,13 +1,17 @@
 package com.automation.pages;
 
-import org.apache.log4j.Logger;
+import static org.testng.Assert.assertEquals;
+
+//import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import com.Zahra.Library.BasePage;
 
 public class TheInternetHerokuappPages extends BasePage {
 
-	final static Logger logger = Logger.getLogger(BasePage.class);
+	//final static Logger logger = Logger.getLogger(BasePage.class);
 
 	// Test case 1 with valid user name and password
 	public TheInternetHerokuappPages formAuthentication() throws Exception {
@@ -24,15 +28,20 @@ public class TheInternetHerokuappPages extends BasePage {
 	// Test case 2 using invalid User name and Password
 	public TheInternetHerokuappPages formAuthentication2() throws Exception {
 		// library.clickOnButton(By.cssSelector("#content > ul > li:nth-child(18) >
-		// a"));
+	
 		library.fluentWait(By.cssSelector("#login > button > i"));
 		library.clickAndSendKeys(By.id("username"), "tomhanks");
 		library.clickAndSendKeys(By.id("password"), "SuperSecretPass!");
 		library.clickOnButton(By.cssSelector("#login > button"));
-		library.clickOnButton(By.cssSelector("#content > div > a"));
+		//String  message = library.findElement(By.id("flash")).getText();
+		WebElement errorMessage= driver.findElement(By.id("flash"));
+		String tempText = errorMessage.getText();
+		Assert.assertEquals(errorMessage.getText(), tempText);
+		//library.clickOnButton(By.cssSelector("#content > div > a"));
 		return this;
 	}
 
+	
 	// Test case 3 using valid user name and invalid password
 	public TheInternetHerokuappPages formAuthentication3() throws Exception {
 		// library.clickOnButton(By.cssSelector("#content > ul > li:nth-child(18) >
@@ -41,7 +50,10 @@ public class TheInternetHerokuappPages extends BasePage {
 		library.clickAndSendKeys(By.id("username"), "tomsmith");
 		library.clickAndSendKeys(By.id("password"), "SuperSecretPass!");
 		library.clickOnButton(By.cssSelector("#login > button"));
-		library.clickOnButton(By.cssSelector("#content > div > a"));
+		WebElement errorMessage= driver.findElement(By.id("flash"));
+		String tempText = errorMessage.getText();
+		Assert.assertEquals(errorMessage.getText(), tempText);
+		//library.clickOnButton(By.cssSelector("#content > div > a"));
 		return this;
 	}
 
@@ -53,7 +65,10 @@ public class TheInternetHerokuappPages extends BasePage {
 		library.clickAndSendKeys(By.id("username"), "tomhanks");
 		library.clickAndSendKeys(By.id("password"), "SuperSecretPassword!");
 		library.clickOnButton(By.cssSelector("#login > button"));
-		library.clickOnButton(By.cssSelector("#content > div > a"));
+		WebElement errorMessage= driver.findElement(By.id("flash"));
+		String tempText = errorMessage.getText();
+		Assert.assertEquals(errorMessage.getText(), tempText);
+		//library.clickOnButton(By.cssSelector("#content > div > a"));
 		return this;
 	}
 
@@ -65,7 +80,10 @@ public class TheInternetHerokuappPages extends BasePage {
 		library.clickAndSendKeys(By.id("username"), "@tomhanks");
 		library.clickAndSendKeys(By.id("password"), "SuperSecretPassword!");
 		library.clickOnButton(By.cssSelector("#login > button"));
-		library.clickOnButton(By.cssSelector("#content > div > a"));
+		WebElement errorMessage= driver.findElement(By.id("flash"));
+		String tempText = errorMessage.getText();
+		Assert.assertEquals(errorMessage.getText(), tempText);
+	//	library.clickOnButton(By.cssSelector("#content > div > a"));
 		return this;
 
 	}
@@ -78,7 +96,10 @@ public class TheInternetHerokuappPages extends BasePage {
 		library.clickAndSendKeys(By.id("username"), "tomsmith1");
 		library.clickAndSendKeys(By.id("password"), "SuperSecretPassword007!");
 		library.clickOnButton(By.cssSelector("#login > button"));
-		library.clickOnButton(By.cssSelector("#content > div > a"));
+		WebElement errorMessage= driver.findElement(By.id("flash"));
+		String tempText = errorMessage.getText();
+		Assert.assertEquals(errorMessage.getText(), tempText);
+	//	library.clickOnButton(By.cssSelector("#content > div > a"));
 		return this;
 	}
 
@@ -90,7 +111,10 @@ public class TheInternetHerokuappPages extends BasePage {
 		library.clickAndSendKeys(By.id("username"), "tomsmith");
 		library.clickAndSendKeys(By.id("password"), "007");
 		library.clickOnButton(By.cssSelector("#login > button"));
-		library.clickOnButton(By.cssSelector("#content > div > a"));
+		WebElement errorMessage= driver.findElement(By.id("flash"));
+		String tempText = errorMessage.getText();
+		Assert.assertEquals(errorMessage.getText(), tempText);
+	//	library.clickOnButton(By.cssSelector("#content > div > a"));
 		return this;
 	}
 
@@ -102,7 +126,10 @@ public class TheInternetHerokuappPages extends BasePage {
 		library.clickAndSendKeys(By.id("username"), "");
 		library.clickAndSendKeys(By.id("password"), "");
 		library.clickOnButton(By.cssSelector("#login > button"));
-		library.clickOnButton(By.cssSelector("#content > div > a"));
+		WebElement errorMessage= driver.findElement(By.id("flash"));
+		String tempText = errorMessage.getText();
+		Assert.assertEquals(errorMessage.getText(), tempText);
+	//	library.clickOnButton(By.cssSelector("#content > div > a"));
 		return this;
 	}
 
@@ -114,7 +141,10 @@ public class TheInternetHerokuappPages extends BasePage {
 		library.clickAndSendKeys(By.id("username"), "tomsmith");
 		library.clickAndSendKeys(By.id("password"), "");
 		library.clickOnButton(By.cssSelector("#login > button"));
-		library.clickOnButton(By.cssSelector("#content > div > a"));
+		WebElement errorMessage= driver.findElement(By.id("flash"));
+		String tempText = errorMessage.getText();
+		Assert.assertEquals(errorMessage.getText(), tempText);
+	//	library.clickOnButton(By.cssSelector("#content > div > a"));
 		return this;
 	}
 
@@ -126,7 +156,10 @@ public class TheInternetHerokuappPages extends BasePage {
 		library.clickAndSendKeys(By.id("username"), "");
 		library.clickAndSendKeys(By.id("password"), "SuperSecretPassword!");
 		library.clickOnButton(By.cssSelector("#login > button"));
-		library.clickOnButton(By.cssSelector("#content > div > a"));
+		WebElement errorMessage= driver.findElement(By.id("flash"));
+		String tempText = errorMessage.getText();
+		Assert.assertEquals(errorMessage.getText(), tempText);
+	//	library.clickOnButton(By.cssSelector("#content > div > a"));
 		return this;
 	}
 
