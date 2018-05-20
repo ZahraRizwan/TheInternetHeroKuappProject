@@ -1,0 +1,10 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="com.automation.tests">
+	 <test name="TestngTest">
+ 		<classes>
+ 			<class name="com.automation.tests.theInternetHerokuappTests"/>
+ 		</classes>
+ 	</test>
+ </suite>
